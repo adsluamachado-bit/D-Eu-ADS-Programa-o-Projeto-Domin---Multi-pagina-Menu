@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominó - Menu Principal</title>
+    <link rel="stylesheet" href="css/menu-style.css">
+</head>
+<body>
+
+    <div class="container-menu" id="container-menu">
+        <h1 class="titulo-jogo" id="titulo-principal">DOMINÓ</h1>
+
+        <div id="vista-inicial-menu">
+            
+            <div class="secao-menu">
+                <h2 class="subtitulo-menu">Modos de Jogo</h2>
+                <button class="btn-menu btn-branco-borda" onclick="selecionarUmJogador()">Um Jogador (J1 vs IA)</button>
+                <button class="btn-menu btn-branco-borda" onclick="mostrarSubmenuMultijogador()">Multi-Jogador (Local/Online)</button>
+            </div>
+
+            <div class="secao-menu">
+                <h2 class="subtitulo-menu">Informações</h2>
+                <button class="btn-menu btn-branco-borda" onclick="mostrarSubmenuRegras()">Regras de jogo e tutorial</button>
+                <button class="btn-menu btn-branco-borda" onclick="abrirSaibaMais()">Saiba mais sobre este projeto</button>
+            </div>
+
+        </div>
+
+        <div id="fluxo-multijogador" class="fluxo-spa duas-colunas">
+            <div class="coluna">
+                <h3>Multijogador</h3>
+                <button class="btn-menu btn-secundario" onclick="voltarParaMenuInicial()">Voltar para menu</button>
+            </div>
+            <div class="coluna">
+                <h3>Selecione a opção de jogo</h3>
+                <button class="btn-menu btn-branco-borda" onclick="irParaModo('2-multijogador-local')">Multiplayer Local</button>
+                <button class="btn-menu btn-branco-borda" onclick="irParaModo('2-multijogador-online')">Multiplayer Online</button>
+            </div>
+        </div>
+
+        <div id="fluxo-regras" class="fluxo-spa duas-colunas">
+            <div class="coluna">
+                <h3>Regras & Tutorial</h3>
+                <button class="btn-menu btn-secundario" onclick="voltarParaMenuInicial()">Voltar para menu</button>
+            </div>
+            <div class="coluna">
+                <h3>Selecione o Guia</h3>
+                <button class="btn-menu btn-branco-borda" onclick="irParaModo('3-regras-de-jogo-e-tutorial')">Tutorial Interativo</button>
+                <button class="btn-menu btn-branco-borda" onclick="mostrarRegrasTexto()">Regras de Jogo</button>
+            </div>
+        </div>
+
+        <div id="bloco-dev">
+            <button id="btn-dev" class="btn-menu btn-rgb" onclick="visitarDesenvolvedor()">Visitar a página do Desenvolvedor</button>
+        </div>
+    </div>
+
+    <script src="js/menu-script.js"></script>
+</body>
+</html>
